@@ -14,7 +14,7 @@ function fish_prompt
   set purple a89fec
   set cyan 70D7FF
   set white F9F6EF
-  set grey 969696
+  set grey 646464
   set orange EE9B70
   set bright_pink ED005C
   set bright_orange ED005C
@@ -39,14 +39,14 @@ function fish_prompt
   set fish_color_cwd_root $bright_cyan
   set fish_color_end $bright_pink
   set fish_color_error $red
-  set fish_color_escape $bright_magenta
+  set fish_color_escape $bright_purple
   set fish_color_history_current $bright_cyan
   set fish_color_host $green
   set fish_color_host_remote $bright_orange
   set fish_color_match $blue
   set fish_color_normal $bright_white
   set fish_color_operator $bright_red
-  set fish_color_param $magenta
+  set fish_color_param $purple
   set fish_color_quote $bright_yellow
   set fish_color_redirection $bright_pink
   set fish_color_search_match --background=$grey
@@ -56,7 +56,7 @@ function fish_prompt
   set fish_color_valid_path $bright_blue
   set fish_pager_color_completion $bright_white
   set fish_pager_color_description --background=$grey
-  set fish_pager_color_prefix $bright_magenta
+  set fish_pager_color_prefix $bright_purple
   set fish_pager_color_progress $cyan
 
 end

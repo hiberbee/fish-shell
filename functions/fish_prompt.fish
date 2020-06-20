@@ -1,6 +1,7 @@
-set -x PATH $HOME/bin $PATH
 
 function fish_prompt
+
+  set -x PATH $HOME/bin $PATH
 
   if type -q starship
     starship init fish | source

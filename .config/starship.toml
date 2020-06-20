@@ -1,0 +1,161 @@
+add_newline = false
+scan_timeout = 0
+prompt_order = [
+  "time",
+  "aws",
+  "kubernetes",
+  "docker_context",
+  "env_var",
+  "nix_shell",
+  "hostname",
+  "username",
+  "directory",
+  "terraform",
+  "git_branch",
+  "git_commit",
+  "git_state",
+  "git_status",
+  "package",
+  "golang",
+  "java",
+  "nodejs",
+  "php",
+  "python",
+  "ruby",
+  "rust",
+  "conda",
+  "cmd_duration",
+  "line_break",
+  "character",
+  "jobs",
+]
+
+[time]
+disabled = false
+format = "%H:%M UTC"
+utc_time_offset = "0"
+
+[aws]
+style = "#FD971F"
+symbol = "aws:"
+prefix = ""
+suffix = ""
+displayed_items = "profile"
+disabled = false
+
+[kubernetes]
+prefix = ""
+suffix = ""
+symbol = "k8s:"
+style = "#57D1EB"
+disabled = false
+
+[docker_context]
+symbol = "dock:"
+only_with_files = false
+disabled = false
+
+[nix_shell]
+style = "#ED6B88"
+disabled = false
+symbol = "#!env "
+use_name = true
+pure_msg = ""
+
+[terraform]
+symbol = "tf:"
+disabled = false
+style = "#9b64ff"
+
+[directory]
+prefix = ""
+#truncation_length = 10
+disabled = false
+
+[hostname]
+prefix = ""
+suffix = ""
+symbol = "host:"
+style = "#ED6B88"
+ssh_only = true
+disabled = false
+
+[username]
+style = "#ED6B88"
+prefix = "iam:"
+show_always = true
+disabled = false
+
+[git_branch]
+prefix = ""
+#symbol = ":"
+truncation_symbol = ""
+disabled = false
+style = "#eb005f"
+
+[git_state]
+prefix = "git"
+symbol = "git:"
+disabled = false
+
+[git_commit]
+disabled = false
+
+[git_status]
+symbol = "git:"
+disabled = true
+
+[package]
+symbol = "p:"
+disabled = false
+
+[nodejs]
+prefix = ""
+symbol = "js:"
+disabled = false
+style = "#FC9867"
+
+[golang]
+prefix = ""
+style = "#FC9867"
+symbol = "go:"
+
+[java]
+prefix = ""
+style = "#FC9867"
+symbol = "java:"
+disabled = false
+
+[php]
+prefix = ""
+style = "#FC9867"
+disabled = false
+symbol = "php:"
+
+[python]
+prefix = ""
+pyenv_prefix = ""
+style = "#FC9867"
+disabled = false
+symbol = "py:"
+
+[rust]
+prefix = ""
+style = "#FC9867"
+disabled = false
+symbol = "rust:"
+
+[ruby]
+prefix = ""
+style = "#FC9867"
+disabled = false
+symbol = "rb:"
+
+[line_break]
+disabled = false
+
+[character]
+use_symbol_for_status = true
+symbol = "λ"
+style = "#A97CF8"
+error_symbol = "✖"

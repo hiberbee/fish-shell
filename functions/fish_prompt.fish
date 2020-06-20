@@ -2,7 +2,7 @@ function fish_prompt
 
   if type -q starship
     starship init fish | source
-  fi
+  end
 
   set black 333333
   set red EE7762

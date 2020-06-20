@@ -1,3 +1,5 @@
+set -x $PATH $HOME/bin $PATH
+
 function fish_prompt
 
   if type -q starship

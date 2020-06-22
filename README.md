@@ -17,3 +17,12 @@
 - [jorgebucaran/fish-getopts](https://github.com/jorgebucaran/fish-getopts)
 - [reitzig/sdkman-for-fish](https://github.com/reitzig/sdkman-for-fish)
 
+## Getting started
+
+You should have *Fish Shell* installed upfront. See [Installation guides](https://fishshell.com/) depending on your OS.
+
+Then you can simply execute:
+
+```
+wget -qO- https://raw.githubusercontent.com/Hiberbee/fish-shell/master/init.sh | bash
+```

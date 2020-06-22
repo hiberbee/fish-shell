@@ -1,5 +1,4 @@
-#!/bin/sh
-
+#!/bin/bash
 
 platform=""
 case $(uname) in
@@ -23,7 +22,7 @@ screenfetch_version=3.9.1
 screenfetch_download_url="https://github.com/KittyKatt/screenFetch/blob/v$screenfetch_version/screenfetch-dev"
 fzf_version=0.21.1
 fzf_dowload_url="https://github.com/junegunn/fzf-bin/releases/download/$fzf_version/fzf-$fzf_version-${platform}_$architecture.tgz"
-theme_url_prefix="https://raw.githubusercontent.com/Hiberbee/fish-theme/master"
+fish_addons_url="https://raw.githubusercontent.com/Hiberbee/fish-theme/master/.config"
 config_dir=${XDG_CONFIG_HOME:-"$HOME/.config"}
 fish_functions_path="$config_dir/fish/functions"
 bin_dir=${BIN_DIR:-$HOME/bin}
@@ -48,10 +47,10 @@ else
 fi
 
 echo "Installing dependencies, theme settings & shell prompts"
-wget "$theme_url_prefix/.config/starship.toml" -qO "$config_dir/starship.toml"
-wget "$theme_url_prefix/fishfile" -qO "$config_dir/fish/fishfile"
-wget "$theme_url_prefix/functions/fish_prompt.fish" -qO "$fish_functions_path/fish_prompt.fish"
-wget "$theme_url_prefix/functions/fish_prompt.fish" -qO "$fish_functions_path/fish_prompt.fish"
+wget "$fish_addons_url/starship.toml" -qO "$config_dir/starship.toml"
+wget "$fish_addons_url/fish/fishfile" -qO "$config_dir/fish/fishfile"
+wget "$fish_addons_url/fish/functions/fish_prompt.fish" -qO "$config_dir/fish/functions/fish_prompt.fish"
+wget "$fish_addons_url/fish/functions/fish_prompt.fish" -qO "$config_dir/fish/functions/fish_prompt.fish"
 
 if [ ! "$(command -v starship)" ]; then
   echo "Installing Starship shell prompt"

@@ -18,14 +18,14 @@ function fish_prompt
   set grey 646464
   set orange EE9B70
   set bright_pink ED005C
-  set bright_orange ED005C
+  set bright_orange FD971F
   set bright_black b3b3b3
   set bright_red F25022
-  set bright_green 7FBA00
+  set bright_green 92D923
   set bright_yellow FFB900
   set bright_blue 00A4EF
-  set bright_purple A97CF8
-  set bright_cyan 00D4F7
+  set bright_purple 9478F6
+  set bright_cyan 4DDFEA
   set bright_white FFFFFF
   set background 191919
   set foreground E1E1E1

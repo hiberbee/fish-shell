@@ -5,7 +5,7 @@
 - [Fisher](https://github.com/jorgebucaran/fisher)
 - [Starship](https://github.com/starship/starship)
 - [FZF](https://github.com/junegunn/fzf)
-- [ScreenFetch](https://github.com/KittyKatt/screenFetch)
+- [XXH](https://github.com/xxh/xxh)
 
 ## Shell extensions
 

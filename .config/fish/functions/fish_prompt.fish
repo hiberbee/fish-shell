@@ -1,4 +1,3 @@
-
 function fish_prompt
 
   set -x PATH $HOME/bin $PATH

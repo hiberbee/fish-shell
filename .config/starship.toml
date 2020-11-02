@@ -1,51 +1,54 @@
 add_newline = false
 scan_timeout = 0
-prompt_order = [
-  "time",
-  "aws",
-  "kubernetes",
-  "docker_context",
-  "env_var",
-  "nix_shell",
-  "hostname",
-  "username",
-  "directory",
-  "terraform",
-  "git_branch",
-  "git_commit",
-  "git_state",
-  "git_status",
-  "package",
-  "golang",
-  "java",
-  "nodejs",
-  "php",
-  "python",
-  "ruby",
-  "rust",
-  "conda",
-  "cmd_duration",
-  "line_break",
-  "character",
-  "jobs",
-]
+#format = "$all"
+format = """
+$time\
+  $aws\
+  $kubernetes\
+  $docker_context\
+  $env_var\
+  $nix_shell\
+  $hostname\
+  $username\
+  $directory\
+  $terraform\
+  $git_branch\
+  $git_commit\
+  $git_state\
+  $git_status\
+  $package\
+  $golang\
+  $java\
+  $nodejs\
+  $php\
+  $python\
+  $ruby\
+  $rust\
+  $conda\
+  $cmd_duration\
+  $line_break\
+  $character\
+  $jobs"""
 
 [time]
 disabled = false
-format = "%H:%M UTC"
+format = '[$time]($style) on '
+time_format = "%H:%M UTC"
+#format = "%H:%M UTC"
 utc_time_offset = "0"
 
 [aws]
 style = "#FD971F"
 symbol = "aws:"
-prefix = ""
-suffix = ""
+#prefix = ""
+#suffix = ""
 displayed_items = "profile"
 disabled = false
 
 [kubernetes]
-prefix = ""
-suffix = ""
+#prefix = ""
+#suffix = ""
+format = '[k8s:$context \($namespace\)]($style) in '
 symbol = "k8s:"
 style = "#57D1EB"
 disabled = false
@@ -68,33 +71,35 @@ disabled = false
 style = "#9b64ff"
 
 [directory]
-prefix = ""
+#prefix = ""
 #truncation_length = 10
 disabled = false
 
 [hostname]
-prefix = ""
-suffix = ""
+#prefix = ""
+#suffix = ""
+format =  "[$hostname]($style) via "
 symbol = "host:"
 style = "#ED6B88"
 ssh_only = false
 disabled = false
 
 [username]
-style = "#ED6B88"
-prefix = "iam:"
+style_user = "bold yellow"
+format = "[$user]($style) at "
+#prefix = "iam:"
 show_always = true
 disabled = false
 
 [git_branch]
-prefix = ""
+#prefix = ""
 #symbol = ":"
 truncation_symbol = ""
 disabled = false
 style = "#eb005f"
 
 [git_state]
-prefix = ""
+#prefix = ""
 symbol = "git:"
 disabled = false
 
@@ -110,43 +115,43 @@ symbol = ""
 disabled = false
 
 [nodejs]
-prefix = ""
+#prefix = ""
 symbol = "js:"
 disabled = false
 style = "#FC9867"
 
 [golang]
-prefix = ""
+#prefix = ""
 style = "#FC9867"
 symbol = "go:"
 
 [java]
-prefix = ""
+#prefix = ""
 style = "#FC9867"
 symbol = "java:"
 disabled = false
 
 [php]
-prefix = ""
+#prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "php:"
 
 [python]
-prefix = ""
+#prefix = ""
 pyenv_prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "py:"
 
 [rust]
-prefix = ""
+#prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "rust:"
 
 [ruby]
-prefix = ""
+#prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "rb:"
@@ -156,6 +161,6 @@ disabled = false
 
 [character]
 use_symbol_for_status = true
-symbol = "λ"
-style = "#A97CF8"
-error_symbol = "✖"
+success_symbol = "[λ](bold green)"
+#style = "#A97CF8"
+error_symbol = "[✖](bold red)"

@@ -1,6 +1,5 @@
 add_newline = false
 scan_timeout = 0
-#format = "$all"
 format = """
 $time\
   $aws\
@@ -34,20 +33,15 @@ $time\
 disabled = false
 format = '[$time]($style) on '
 time_format = "%H:%M UTC"
-#format = "%H:%M UTC"
 utc_time_offset = "0"
 
 [aws]
 style = "#FD971F"
 symbol = "aws:"
-#prefix = ""
-#suffix = ""
 displayed_items = "profile"
 disabled = false
 
 [kubernetes]
-#prefix = ""
-#suffix = ""
 format = '[k8s:$context \($namespace\)]($style) in '
 symbol = "k8s:"
 style = "#57D1EB"
@@ -71,13 +65,9 @@ disabled = false
 style = "#9b64ff"
 
 [directory]
-#prefix = ""
-#truncation_length = 10
 disabled = false
 
 [hostname]
-#prefix = ""
-#suffix = ""
 format =  "[$hostname]($style) via "
 symbol = "host:"
 style = "#ED6B88"
@@ -87,19 +77,15 @@ disabled = false
 [username]
 style_user = "bold yellow"
 format = "[$user]($style) at "
-#prefix = "iam:"
 show_always = true
 disabled = false
 
 [git_branch]
-#prefix = ""
-#symbol = ":"
 truncation_symbol = ""
 disabled = false
 style = "#eb005f"
 
 [git_state]
-#prefix = ""
 symbol = "git:"
 disabled = false
 
@@ -115,43 +101,36 @@ symbol = ""
 disabled = false
 
 [nodejs]
-#prefix = ""
 symbol = "js:"
 disabled = false
 style = "#FC9867"
 
 [golang]
-#prefix = ""
 style = "#FC9867"
 symbol = "go:"
 
 [java]
-#prefix = ""
 style = "#FC9867"
 symbol = "java:"
 disabled = false
 
 [php]
-#prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "php:"
 
 [python]
-#prefix = ""
 pyenv_prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "py:"
 
 [rust]
-#prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "rust:"
 
 [ruby]
-#prefix = ""
 style = "#FC9867"
 disabled = false
 symbol = "rb:"
@@ -162,5 +141,4 @@ disabled = false
 [character]
 use_symbol_for_status = true
 success_symbol = "[λ](bold green)"
-#style = "#A97CF8"
 error_symbol = "[✖](bold red)"

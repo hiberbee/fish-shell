@@ -20,10 +20,10 @@ arm) dpkg --print-architecture | grep -q "arm64" && architecture="arm64" || arch
 esac
 
 
-fisher_version=3.2.11
+fisher_version=4.3.0
 fisher_download_url="https://raw.githubusercontent.com/jorgebucaran/fisher/$fisher_version/fisher.fish"
 starship_download_url="https://starship.rs/install.sh"
-fzf_version=0.21.1
+fzf_version=0.27.0
 fzf_dowload_url="https://github.com/junegunn/fzf-bin/releases/download/$fzf_version/fzf-$fzf_version-${platform}_$architecture.tgz"
 fish_addons_url="https://raw.githubusercontent.com/Hiberbee/fish-theme/master/.config"
 xxh_url="https://github.com/xxh/xxh-portable/raw/master/result/xxh-portable-musl-alpine-Linux-x86_64.tar.gz"

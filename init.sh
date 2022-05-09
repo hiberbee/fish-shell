@@ -57,7 +57,8 @@ fi
 
 if [ ! -f "$fish_functions_dir/fisher.fish" ]; then
   echo -e "${yellow}Downloading fisher...${transparent}"
-  curl -sL $fisher_download_url | source && fisher install jorgebucaran/fisher
+  curl -sL $fisher_download_url | source
+  fisher install jorgebucaran/fisher
 else
   echo -e "${cyan}fisher${green} already installed.${transparent}"
 fi
